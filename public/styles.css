@@ -1,0 +1,4 @@
+:root{--bg:#0f172a;--fg:#e6eef8;--accent:#7dd3fc}
+body{font-family:Inter,system-ui,Arial; margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,var(--bg),#071024); color:var(--fg)}
+main{padding:2rem; text-align:center; border-radius:12px; box-shadow:0 8px 30px rgba(2,6,23,.6)}
+button{background:var(--accent); border:none; padding:.6rem 1rem; border-radius:8px; cursor:pointer}
