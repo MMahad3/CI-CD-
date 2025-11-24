@@ -1,0 +1,14 @@
+{
+  "name": "static-site-ci",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "mkdir -p dist && cp -r public/* dist/",
+    "start": "npx http-server public -p 8080"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "type": "module"
+}
