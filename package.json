@@ -8,6 +8,7 @@
     "start": "npx http-server public -p 8080"
   },
   "devDependencies": {
+    "eslint": "^9.39.1",
     "jest": "^29.0.0"
   },
   "type": "module"
