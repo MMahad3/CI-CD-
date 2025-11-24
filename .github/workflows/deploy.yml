@@ -14,9 +14,10 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -27,8 +28,15 @@ jobs:
       - name: Run ESLint (unit test)
         run: npx eslint src/**/*.js || true
 
-      - name: Build
+      - name: Build project
         run: npm run build
+
+      - name: Check dist folder exists
+        run: |
+          if [ ! -d dist ]; then
+            echo "❌ dist/ folder missing!"
+            exit 1
+          fi
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -41,12 +49,17 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist
+
+      - name: List files (debug)
+        run: ls -R dist
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
