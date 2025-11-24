@@ -2,17 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Static Site — Demo</title>
+  <title>Static Site — Premium Demo</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <h1 id="title">Hello — Static Site CI Demo</h1>
-    <p id="desc">This is a tiny static site for CI/CD practice.</p>
-    <button id="countBtn">Click me</button>
-    <p id="count">0</p>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="glass-card hero-content">
+        <h1 id="title">Hello — Static Site CI Demo</h1>
+        <p id="desc" class="hero-desc">A beautifully crafted static site for CI/CD practice and modern web development</p>
+        <div class="counter-section">
+          <button id="countBtn" class="glow-button">Click me</button>
+          <p id="count" class="counter">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Static Sites?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Static sites deliver content at incredible speeds with minimal server overhead and optimized performance.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure & Reliable</h3>
+          <p>With no database or server-side processing, static sites significantly reduce security vulnerabilities.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Easy Deployment</h3>
+          <p>Deploy instantly to CDN networks worldwide with continuous integration and automated workflows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="quotes">
+    <div class="container">
+      <h2 class="section-title">Developer Wisdom</h2>
+      <div class="quotes-grid">
+        <div class="quote-card">
+          <p class="quote-text">"The best tool is the one you don't have to think about. It just works."</p>
+          <p class="quote-author">– Anonymous Developer</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Simplicity is the ultimate sophistication when building for the web."</p>
+          <p class="quote-author">– Leonardo da Vinci (adapted)</p>
+        </div>
+        <div class="quote-card">
+          <p class="quote-text">"Continuous integration isn't just about code—it's about continuous improvement."</p>
+          <p class="quote-author">– DevOps Principle</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Static Site Demo. Built with modern CI/CD practices.</p>
+    </div>
+  </footer>
+
   <script type="module" src="/script.js"></script>
 </body>
 </html>

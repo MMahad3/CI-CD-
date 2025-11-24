@@ -1,10 +1,15 @@
-import { increment } from '../utils.js';
+// Counter functionality
+let count = 0;
+const countBtn = document.getElementById('countBtn');
+const countDisplay = document.getElementById('count');
 
-const btn = document.getElementById('countBtn');
-const display = document.getElementById('count');
-
-let value = 0;
-btn.addEventListener('click', () => {
-  value = increment(value);
-  display.textContent = value;
+countBtn.addEventListener('click', () => {
+  count++;
+  countDisplay.textContent = count;
+  
+  // Add a subtle animation when counter updates
+  countDisplay.style.transform = 'scale(1.1)';
+  setTimeout(() => {
+    countDisplay.style.transform = 'scale(1)';
+  }, 150);
 });
