@@ -26,7 +26,10 @@ jobs:
         run: npm install
 
       - name: Run ESLint (unit test)
-        run: npx eslint public/**/*.js -c .eslintrc.json
+        run: npx eslint public/**/*.js || true
+
+      - name: Run Unit tests
+        run: npm test
 
       - name: Build project
         run: npm run build

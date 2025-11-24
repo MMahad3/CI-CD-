@@ -2,14 +2,16 @@
   "name": "static-site-ci",
   "version": "0.1.0",
   "private": true,
+
+  
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "build": "mkdir -p dist && cp -r public/* dist/",
     "start": "npx http-server public -p 8080"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
-    "jest": "^29.0.0"
-  },
-  "type": "module"
+    "jest": "^30.2.0"
+  }
+  
 }

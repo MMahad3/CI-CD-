@@ -1,4 +1,5 @@
-import { increment } from '../src/utils.js';
+// tests/utils.test.js
+const { increment } = require('../src/utils.js');
 
 test('increment increases number by 1', () => {
   expect(increment(0)).toBe(1);
